@@ -1,0 +1,18 @@
+{{#with this}}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{director}}</p>
+      <p class="card-text"><small class="text-muted">{{duration}}</small></p>
+      {{#if outstanding}}
+        <span class="badge bg-warning text-dark">Recommended</span>
+      {{else}}
+        <span class="badge bg-success">Good</span>
+      {{/if}}
+
+      {{#unless isClassic}}
+        <span class="badge bg-primary">New</span>
+      {{/unless}}
+    </div>
+  </div>
+{{/with}}
